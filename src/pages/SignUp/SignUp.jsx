@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import login from '../../assets/images/login/login.svg'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const SignUp = () => {
     const {createUser}=useContext(AuthContext);
@@ -46,7 +47,7 @@ const SignUp = () => {
                 <label className="label">
                   <span className="label-text">Confirm Password</span>
                 </label>
-                <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                <input type="password" name='password' placeholder="password" className="input input-bordered" />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                 </label>
@@ -56,7 +57,8 @@ const SignUp = () => {
                 <input className="btn btn-primary" type="submit" value="SignUp" />
               </div>
               </form>
-              <p className='my-4 text-center'>Already have an Account? <Link to='/login' className='text-orange-600 font-bold'>Sign Up</Link></p>
+              <p className='my-4 text-center'>Already have an Account? <Link to='/login' className='text-orange-600 font-bold'>Login</Link></p>
+              <SocialLogin></SocialLogin>
             </div>
           </div>
         </div>
